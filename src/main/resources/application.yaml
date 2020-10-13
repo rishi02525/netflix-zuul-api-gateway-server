@@ -1,0 +1,13 @@
+zuul:
+  ratelimit:
+    key-prefix: your-prefix
+    enabled: false
+    repository: REDIS
+    behind-proxy: true
+    add-response-headers: true
+    policies:
+    base:
+    limit: 10
+    refresh-interval: 60
+    type:
+    - origin
